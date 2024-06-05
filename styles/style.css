@@ -114,6 +114,10 @@ li a:hover{
     margin: 0.5rem 0 1rem;
 }
 
+.hero-name #client-name{
+    text-transform: capitalize;
+}
+
 .hero-name #owner-name{
     color: #ffad05;
 }
@@ -207,6 +211,41 @@ li a:hover{
 
 .btn-submit:hover{
     background-color: #ffad05;
+}
+
+.messageus-right {
+    max-height: 386px   ;
+    overflow-y: scroll;
+    /* border: 1px solid #ddd; */
+    padding: 1rem;
+    /* background-color: #f9f9f9; */
+    border-radius: 3px;
+}
+
+.message-item {
+    padding: 1rem;
+    margin-bottom: 1.4rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message-item p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.messageus-right::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.messageus-right {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 footer{

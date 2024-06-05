@@ -16,7 +16,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#myskill">My Skills</a></li>
-                    <li><a href="#message">Message Us</a></li>
+                    <li><a href="#messageus">Message Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -86,22 +86,22 @@
         <h1 class="section-title messageus-title">Message Us</h1>
         <div class="messageus-container">
             <div class="messageus-left">
-                <form action="" method="post" class="messageus-form">
+                <form action="" class="messageus-form">
                     <div>
-                        <input type="text" placeholder="Name" name="name"/>
+                        <input type="text" placeholder="Name" name="name" id="name"/>
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" name="email"/>
+                        <input type="email" placeholder="Email" name="email" id="email"/>
                     </div>
                     <div>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <textarea name="message" id="message-box" cols="30" rows="10" placeholder="Message"></textarea>
                     </div>
                     <div>
-                        <button class="btn-submit">Send Message</button>
+                        <button type="submit" class="btn-submit">Send Message</button>
                     </div>
                 </form>
             </div>
-            <div class="message-right">
+            <div class="messageus-right" id="messages-container">
 
             </div>
         </div>
@@ -109,6 +109,6 @@
     <footer>
         <p>&#169; 2024 - Made by Laili Lukman</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
