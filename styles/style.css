@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-:root {
-    --primaryTextColor: #232e35; /* Untuk title atau judul */
-    --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
-  
-    --borderColor: #f1f1f1;
-    --lineColor: #d9d9d9; /* untuk line di pre-title */
-  
-    --primaryBackgroundColor: #fff;
-    --secondaryBackgroundColor: #fbfbfb;
-    --thirdBackgroundColor: #f5f3fe;
-  
-    --primaryIconColor: #7e74f1;
-    --primaryIconColorHover: #5d51e8;
-  
-    --sectionPadding: 6rem 0;
-  
-    --itemBorderRadius: 0.7rem;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -30,23 +11,60 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, strong{
-    color: var(--primaryTextColor);
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
 }
 
-p, span, label, input, textarea, li{
-    color: var(--secondaryTextColor);
+h1, h2, h3, h4, h5, h6, strong{
+    color: #000000;
+}
+
+p, span, label, input, textarea, li, a{
+    color: #222222;
 }
 
 a{
     text-decoration: none;
 }
 
+.main-container, .home-container, .myskill-container, .message-container, .footer-container{
+    margin: 0 20px;
+}
+
 /* end of preparation */
 
+/* Titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+  
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+  
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #222222;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* end of titles */
+
 .main-container{
-    /* width: 1200px; */
-    margin: 0 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -75,6 +93,35 @@ li a{
 }
 
 li a:hover{
-    background-color: var(--primaryTextColor);
-    box-shadow: var(--secondaryTextColor);
+    background-color: #ffad05;
+}
+
+#home{
+    background-color: #F3F3F3;
+}
+
+.home-container{
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name #owner-name{
+    color: #ffad05;
+}
+
+.hero-right{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img{
+    width: 90%;
 }
