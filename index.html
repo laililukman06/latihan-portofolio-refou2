@@ -16,7 +16,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#myskill">My Skills</a></li>
-                    <li><a href="#message">Message</a></li>
+                    <li><a href="#message">Message Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,58 +41,73 @@
     </section>
     <section id="myskill">
         <div class="myskill-container">
-            <h2>My Skills</h2>
-            <div>
-                <div class="html-icon"></div>
-                <p>HTML</p>
-            </div>
-            <div>
-                <div class="css-icon"></div>
-                <p>CSS</p>
-            </div>
-            <div>
-                <div class="javascript-icon"></div>
-                <p>JavaScript</p>
+            <h1 class="section-title myskill-title">My Skills</h1>
+            <div class="grid-3">
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/html.png" alt="logo-html5">
+                    </div>
+                    <h4>HTML</h4>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard language for 
+                        creating and structuring content on the web. It defines elements 
+                        like headings, paragraphs, and images, forming the backbone of 
+                        web pages.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/css-3.png" alt="logo-css3">
+                    </div>
+                    <h4>CSS</h4>
+                    <p>
+                        Cascading Style Sheets (CSS) is a stylesheet language used to 
+                        describe the presentation of a document written in HTML. CSS 
+                        controls the layout, colors, fonts, and overall visual 
+                        appearance of web pages.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="img/js.png" alt="logo-js">
+                    </div>
+                    <h4>JavaScript</h4>
+                    <p>
+                        JavaScript is a dynamic programming language used to create 
+                        interactive effects and enhance user experiences on web pages. 
+                        It allows developers to implement complex features such as 
+                        animations, form validations, and dynamic content updates.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <section id="message">
-        <div class="message-container">
-            <h3>Pesan</h3>
-            <div id="form-and-messages" style="display: flex; justify-content: space-between;">
-                <form action="" id="message-form">
-                    <table>
-                        <tr>
-                            <td><label for="name">Nama</label></td>
-                            <td>:</td>
-                            <td><input type="text" name="name" id="name" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="email">E-mail</label></td>
-                            <td>:</td>
-                            <td><input type="email" name="email" id="email" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="message-box">Pesan</label></td>
-                            <td>:</td>
-                            <td><textarea name="message-box" id="message-box" required></textarea></td>
-                        </tr>
-                        <tr>
-                            <td colspan="3"><button type="submit">Kirim</button></td>
-                        </tr>
-                    </table>
+    <section id="messageus">
+        <h1 class="section-title messageus-title">Message Us</h1>
+        <div class="messageus-container">
+            <div class="messageus-left">
+                <form action="" method="post" class="messageus-form">
+                    <div>
+                        <input type="text" placeholder="Name" name="name"/>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" name="email"/>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn-submit">Send Message</button>
+                    </div>
                 </form>
-                <!-- <div id="response-messages">
-                    <h4>Pesan Masuk</h4>
-                    <div id="messages-container"></div>
-                </div> -->
+            </div>
+            <div class="message-right">
+
             </div>
         </div>
     </section>
     <footer>
-        <div class="footer-container">
-            Laili Lukman
-        </div>
+        <p>&#169; 2024 - Made by Laili Lukman</p>
     </footer>
     <script src="scripts/script.js"></script>
 </body>

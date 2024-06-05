@@ -28,8 +28,9 @@ a{
     text-decoration: none;
 }
 
-.main-container, .home-container, .myskill-container, .message-container, .footer-container{
-    margin: 0 20px;
+.main-container, .home-container, .myskill-container, .messageus-container, .footer-container{
+    width: 1200px;
+    margin: 0 auto;
 }
 
 /* end of preparation */
@@ -97,7 +98,7 @@ li a:hover{
 }
 
 #home{
-    background-color: #F3F3F3;
+    background-color: #fbfbfb;
 }
 
 .home-container{
@@ -124,4 +125,92 @@ li a:hover{
 
 .hero-right img{
     width: 90%;
+}
+
+#myskill{
+    padding: 6rem 0;
+    background-color: #ffd175;
+}
+
+.myskill-title{
+    text-align: center;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.skill{
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fbfbfb;
+    border-radius: 0.7rem;
+}
+
+.skill h4{
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.skill-icon img{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+#messageus{
+    padding: 6rem 0;
+}
+
+.messageus-title{
+    text-align: center;
+}
+
+.messageus-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.messageus-form div{
+    margin-bottom: 1.4rem;
+}
+
+.messageus-form div input, .messageus-form div textarea{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #fbfbfb;
+    border: 1px solid #222222);
+    border-radius: 3px;
+    resize: none;
+}
+
+.messageus-form input::placeholder, .messageus-form textarea::placeholder{
+    color: #7d7d7d;
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: #ffd175;
+    color: #000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover{
+    background-color: #ffad05;
+}
+
+footer{
+    padding: 2rem 0;
+    background-color: #ffd175;
+    text-align: center;
 }
