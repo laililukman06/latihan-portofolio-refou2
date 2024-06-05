@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+    --primaryTextColor: #232e35; /* Untuk title atau judul */
+    --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
+  
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9; /* untuk line di pre-title */
+  
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+  
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+  
+    --sectionPadding: 6rem 0;
+  
+    --itemBorderRadius: 0.7rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--primaryTextColor);
+}
+
+p, span, label, input, textarea, li{
+    color: var(--secondaryTextColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* end of preparation */
+
+.main-container{
+    /* width: 1200px; */
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 2rem 0;
+    gap: 3rem 0;
+}
+
+li a{
+    margin: 5px;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+li a:hover{
+    background-color: var(--primaryTextColor);
+    box-shadow: var(--secondaryTextColor);
+}
