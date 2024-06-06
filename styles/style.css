@@ -33,9 +33,6 @@ a{
     margin: 0 auto;
 }
 
-/* end of preparation */
-
-/* Titles */
 .section-title {
     margin: 1rem 0 4rem;
     font-size: 2rem;
@@ -44,26 +41,18 @@ a{
 .pre-title {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    color: var(--secondaryTextColor);
-    position: relative;
-    padding-left: 40px;
+    color: #7d7d7d;
     width: fit-content;
     font-weight: 400;
     font-size: 0.9rem;
 }
-  
-.pre-title::before {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background: #222222;
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 50%;
-}
 
-/* end of titles */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fbfbfb;
+}
 
 .main-container{
     display: flex;
@@ -76,8 +65,8 @@ a{
 }
 
 .logo img{
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
 }
 
 nav ul{
@@ -90,14 +79,31 @@ nav ul{
 li a{
     margin: 5px;
     padding: 20px;
-    /* border: 1px solid black; */
 }
 
 li a:hover{
-    background-color: #ffad05;
+    background-color: #fbfbfb;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 17.5px;
+    right: 35px;
 }
 
 #home{
+    padding: 120px;
     background-color: #fbfbfb;
 }
 
@@ -133,7 +139,7 @@ li a:hover{
 
 #myskill{
     padding: 6rem 0;
-    background-color: #ffd175;
+    background-color: #ffad05;
 }
 
 .myskill-title{
@@ -189,7 +195,7 @@ li a:hover{
     padding: 0.75rem 1.3rem;
     font-family: "Roboto", sans-serif;
     background: #fbfbfb;
-    border: 1px solid #222222);
+    border: 1px solid #222222;
     border-radius: 3px;
     resize: none;
 }
@@ -201,7 +207,7 @@ li a:hover{
 .btn-submit{
     width: 100%;
     padding: 0.75rem 1.3rem;
-    background-color: #ffd175;
+    background-color: #ffad05;
     color: #000;
     border: none;
     border-radius: 3px;
@@ -210,15 +216,13 @@ li a:hover{
 }
 
 .btn-submit:hover{
-    background-color: #ffad05;
+    background-color: #e29700;
 }
 
 .messageus-right {
     max-height: 386px   ;
     overflow-y: scroll;
-    /* border: 1px solid #ddd; */
     padding: 1rem;
-    /* background-color: #f9f9f9; */
     border-radius: 3px;
 }
 
@@ -236,20 +240,126 @@ li a:hover{
     margin-bottom: 0.5rem;
 }
 
-
-/* Hide scrollbar for Chrome, Safari and Opera */
 .messageus-right::-webkit-scrollbar {
     display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.messageus-right {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
 footer{
     padding: 2rem 0;
-    background-color: #ffd175;
+    background-color: #ffad05;
     text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container, .home-container, .myskill-container, .messageus-container, .footer-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    p{
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+    .grid-3{
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1{
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+    
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    nav{
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: #fbfbfb;
+        border-left: #7d7d7d;
+        z-index: 99;
+        transform: translateX(100%);
+        transition: 0.2s ease-in-out;
+    }
+
+    nav ul{
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-active{
+        transform: translateX(0);
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin: 0.6rem 0 2.5rem;
+    }
+    
+    .pre-title {
+        font-size: 0.8rem;
+    }
+    
+    .home-container {
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    
+    .hero-right {
+        order: -1;
+    }
+    
+    .hero-right img {
+        width: 70%;
+    }
+    
+    .hero-left {
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-left .pre-title {
+        margin: 0 auto;
+    }
+    
+    .hero-name {
+        font-size: 2.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-icon img{
+        width: 45%;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-title{
+        font-size: 1.3rem;
+    }
+
+    .pre-title{
+        font-size: 0.7rem;
+    }
 }
